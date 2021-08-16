@@ -3,7 +3,8 @@ package com.ahmed.coderswag.Services
 import com.ahmed.coderswag.Model.Category
 import com.ahmed.coderswag.Model.Product
 
-class DataService {
+open class DataService {
+
     val categories = listOf(
         Category("SHIRTS","shirtimage"),
         Category("HOODIES","hoodieimage"),
