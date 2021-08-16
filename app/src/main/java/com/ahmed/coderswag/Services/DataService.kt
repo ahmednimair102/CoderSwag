@@ -3,13 +3,21 @@ package com.ahmed.coderswag.Services
 import com.ahmed.coderswag.Model.Category
 import com.ahmed.coderswag.Model.Product
 
-open class DataService {
+object DataService {
 
     val categories = listOf(
         Category("SHIRTS","shirtimage"),
         Category("HOODIES","hoodieimage"),
         Category("HATS" ,"hatimage"),
-        Category("DIGITAL" , "digitalgoodsimage")
+        Category("DIGITAL" , "digitalgoodsimage"),
+        Category("SHIRTS", "shirtimage"),
+    Category("HOODIES", "hoodieimage"),
+    Category("HATS", "hatimage"),
+    Category("DIGITAL", "digitalgoodsimage"),
+    Category("SHIRTS", "shirtimage"),
+    Category("HOODIES", "hoodieimage"),
+    Category("HATS", "hatimage"),
+    Category("DIGITAL", "digitalgoodsimage")
     )
 
     val hats = listOf(

@@ -10,10 +10,31 @@ import android.widget.TextView
 import com.ahmed.coderswag.Model.Category
 import com.ahmed.coderswag.R
 
-open class CategoryAdapter (context: Context , categories: List<Category> ): BaseAdapter() {
+class CategoryAdapter (context: Context , categories: List<Category> ): BaseAdapter() {
 
     val context = context
     val categories =categories
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        val categoryView : View
+        val holder: ViewHolder
+        if (convertView == null){
+            categoryView = LayoutInflater.from(context).inflate(R.layout.category_list_items , null)
+            holder = ViewHolder()
+            holder.categoryImage= categoryView.findViewById(R.id.categoryImage)
+            holder.categoryName = categoryView.findViewById(R.id.categoryName)
+            categoryView.tag = holder
+        }else{
+            holder = convertView.tag as ViewHolder
+            categoryView = convertView
+        }
+
+        val category = categories[position]
+        val resourceId = context.resources.getIdentifier(category.image ,"drawable" , context.packageName)
+        holder.categoryImage?.setImageResource(resourceId)
+        holder.categoryName?.text = category.title
+        return categoryView
+    }
     override fun getCount(): Int {
         return categories.count()
     }
@@ -26,15 +47,8 @@ open class CategoryAdapter (context: Context , categories: List<Category> ): Bas
         return 0
     }
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val categoryView : View
-        categoryView = LayoutInflater.from(context).inflate(R.layout.category_list_items , null)
-        val categoryImage : ImageView = categoryView.findViewById(R.id.categoryImage)
-        val categoryName : TextView = categoryView.findViewById(R.id.categoryName)
-        val category = categories
-        val resourceId = context.resources.getIdentifier(category.image ,"drawable" , context.packageName)
-        categoryImage.setImageResource(resourceId)
-        categoryName.text = category.title
-        return categoryView
+    private class ViewHolder {
+        var categoryImage : ImageView? = null
+        var categoryName : TextView? =null
     }
 }
