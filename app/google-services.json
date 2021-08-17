@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "896445818834",
+    "project_id": "sqlite-app-edefd",
+    "storage_bucket": "sqlite-app-edefd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896445818834:android:b3460b09aab589499e0a0b",
+        "android_client_info": {
+          "package_name": "com.ahmed.coderswag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896445818834-8d15a8hn3kc5nnq5nmtg6llhnnhbinh5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL1L3_U45HX-mXIBOFDIZj-Amf9R89OgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896445818834-8d15a8hn3kc5nnq5nmtg6llhnnhbinh5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896445818834:android:7f15fb84913ce4959e0a0b",
+        "android_client_info": {
+          "package_name": "com.ahmed.sqliteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896445818834-8d15a8hn3kc5nnq5nmtg6llhnnhbinh5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL1L3_U45HX-mXIBOFDIZj-Amf9R89OgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896445818834-8d15a8hn3kc5nnq5nmtg6llhnnhbinh5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
