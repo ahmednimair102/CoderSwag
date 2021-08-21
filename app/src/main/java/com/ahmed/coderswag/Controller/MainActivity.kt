@@ -2,20 +2,26 @@ package com.ahmed.coderswag.Controller
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.ahmed.coderswag.Adapters.CategoryAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.ahmed.coderswag.Adapters.RecyclerAdapter
 import com.ahmed.coderswag.R
 import com.ahmed.coderswag.Services.DataService
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var adapter : CategoryAdapter
+    lateinit var adapter : RecyclerAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter = CategoryAdapter(this, DataService.categories)
+        adapter = RecyclerAdapter(this, DataService.categories)
         categorylistview.adapter =adapter
+
+        val layoutManager = LinearLayoutManager(this)
+        categorylistview.layoutManager = layoutManager
+        categorylistview.setHasFixedSize(true)
+
 
         //categorylistview.setOnItemClickListener { parent, view, position, id ->
            // val categories = DataService.categories[position]
