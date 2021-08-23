@@ -21,24 +21,60 @@ object DataService {
     )
 
     val hats = listOf(
-        Product("Big Bang City Hat", "$12" , "hat01"),
-        Product("Big Bang World Hat", "$18" , "hat02"),
-        Product("Big Bang Universe Hat", "$20" , "hat03"),
-        Product("Big Bang Galaxy Hat", "$25" , "hat04")
+        Product("Big Bang City Hat", "$12" , "hat1"),
+        Product("Big Bang World Hat", "$18" , "hat2"),
+        Product("Big Bang Universe Hat", "$20" , "hat3"),
+        Product("Big Bang Galaxy Hat", "$25" , "hat4"),
+        Product("Big Bang City Hat", "$12" , "hat1"),
+        Product("Big Bang World Hat", "$18" , "hat2"),
+        Product("Big Bang Universe Hat", "$20" , "hat3"),
+        Product("Big Bang Galaxy Hat", "$25" , "hat4"),
+        Product("Big Bang City Hat", "$12" , "hat1"),
+        Product("Big Bang World Hat", "$18" , "hat2"),
+        Product("Big Bang Universe Hat", "$20" , "hat3"),
+        Product("Big Bang Galaxy Hat", "$25" , "hat4")
     )
 
     val hoodie = listOf(
-        Product("Monster Hoodie", "$25", "hoodie01"),
-        Product("Big Monster Hoodie", "$35", "hoodie02"),
-        Product("Very Big Monster Hoodie", "$45", "hoodie03"),
-        Product("Very Very Big Monster Hoodie", "$55", "hoodie04")
+        Product("Monster Hoodie", "$25", "hoodie1"),
+        Product("Big Monster Hoodie", "$35", "hoodie2"),
+        Product("Very Big Monster Hoodie", "$45", "hoodie3"),
+        Product("Very Very Big Monster Hoodie", "$55", "hoodie4"),
+        Product("Monster Hoodie", "$25", "hoodie1"),
+        Product("Big Monster Hoodie", "$35", "hoodie2"),
+        Product("Very Big Monster Hoodie", "$45", "hoodie3"),
+        Product("Very Very Big Monster Hoodie", "$55", "hoodie4"),
+        Product("Monster Hoodie", "$25", "hoodie1"),
+        Product("Big Monster Hoodie", "$35", "hoodie2"),
+        Product("Very Big Monster Hoodie", "$45", "hoodie3"),
+        Product("Very Very Big Monster Hoodie", "$55", "hoodie4")
     )
 
     val shirts = listOf(
-        Product("Monster Shirts", "$25", "shirt01"),
-        Product("Big Monster Shirts", "$35", "shirt02"),
-        Product("Very Big Monster Shirts", "$45", "shirt03"),
-        Product("Very Very Big Monster Shirts", "$55", "shirt04"),
-        Product("Very Very insane Big Monster Shirts", "$65", "shirt05")
+        Product("Monster Shirts", "$25", "shirt1"),
+        Product("Big Monster Shirts", "$35", "shirt2"),
+        Product("Very Big Monster Shirts", "$45", "shirt3"),
+        Product("Very Very Big Monster Shirts", "$55", "shirt4"),
+        Product("Very Very insane Big Monster Shirts", "$65", "shirt5"),
+        Product("Monster Shirts", "$25", "shirt1"),
+        Product("Big Monster Shirts", "$35", "shirt2"),
+        Product("Very Big Monster Shirts", "$45", "shirt3"),
+        Product("Very Very Big Monster Shirts", "$55", "shirt4"),
+        Product("Very Very insane Big Monster Shirts", "$65", "shirt5"),
+        Product("Monster Shirts", "$25", "shirt1"),
+        Product("Big Monster Shirts", "$35", "shirt2"),
+        Product("Very Big Monster Shirts", "$45", "shirt3"),
+        Product("Very Very Big Monster Shirts", "$55", "shirt4"),
+        Product("Very Very insane Big Monster Shirts", "$65", "shirt5")
     )
+    val digitalGood = listOf<Product>()
+
+    fun getProducts(category: String?) :List<Product>{
+        return when(category){
+            "SHIRTS" -> shirts
+            "HATS" -> hats
+            "HOODIES"-> hoodie
+            else -> digitalGood
+        }
+    }
 }
