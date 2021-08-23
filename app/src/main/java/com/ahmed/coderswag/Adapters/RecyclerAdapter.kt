@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ahmed.coderswag.Model.Category
 import com.ahmed.coderswag.R
 
-class RecyclerAdapter(val context: Context ,val categories: List<Category>) : RecyclerView.Adapter<RecyclerAdapter.Holder>() {
+class RecyclerAdapter(val context: Context ,val categories: List<Category> , val itemClick: (Category) -> Unit) : RecyclerView.Adapter<RecyclerAdapter.Holder>() {
 
     inner class holder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -36,6 +36,8 @@ class RecyclerAdapter(val context: Context ,val categories: List<Category>) : Re
                 "drawable", context.packageName)
             categoryImage?.setImageResource(resourceId)
             categoryName?.text = category.title
+            itemView.setOnClickListener{itemClick(category)}
+
         }
     }
 }
